@@ -135,7 +135,6 @@ function check_product()
     else
        AOSP_BUILD=
     fi
-    export AOSP_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \

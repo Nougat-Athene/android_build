@@ -135,6 +135,7 @@ function check_product()
     else
        AOSP_BUILD=
     fi
+    export AOSP_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
@@ -557,7 +558,7 @@ function brunch()
 function breakfast()
 {
     target=$1
-    DU_DEVICES_ONLY="true"
+    AOSP_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
     for f in `/bin/ls vendor/du/vendorsetup.sh 2> /dev/null`
@@ -577,7 +578,7 @@ function breakfast()
             lunch $target
         else
             # This is probably just the du model name
-            lunch du_$target-userdebug
+            lunch aosp_$target-userdebug
         fi
     fi
     return $?

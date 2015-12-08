@@ -627,6 +627,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   device_specific.FullOTA_InstallBegin()
 
+
   if OPTIONS.backuptool:
     script.Mount("/system")
     script.RunBackup("backup")

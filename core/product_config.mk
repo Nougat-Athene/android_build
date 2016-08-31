@@ -193,7 +193,7 @@ else
   endif # AOSP_BUILD
 endif
 
-ifeq ($(DU_BUILD),)
+ifeq ($(AOSP_BUILD),)
 # Find the product config makefile for the current product.
 # all_product_configs consists items like:
 # <product_name>:<path_to_the_product_makefile>
